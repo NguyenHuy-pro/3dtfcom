@@ -1,0 +1,112 @@
+/*-------land-------- */
+.tf-land {
+    position: absolute;
+    text-align: center;
+    cursor: pointer;
+}
+
+.tf-land-icon-new {
+    top: 0;
+    left: 0;
+}
+
+.tf-land-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.tf-land-icon-publish {
+    position: absolute;
+    margin-left: 50%;
+    left: -32px;
+    /*margin-top: 50%;*/
+    bottom: 0;
+}
+
+.tf-land-access-focus {
+    position: absolute;
+    top: -100px;
+    font-size: 80px;
+    z-index: 99999999;
+    margin: 0 auto;
+}
+
+.tf-land-view-red {
+    border: dashed red 2px;
+}
+
+.tf-land-view-white {
+    outline: 3px dashed red;
+    border: dotted yellow 2px;
+}
+
+/*------------ ---------- transaction ------------ ---------- */
+.tf-land-transaction-status {
+    position: relative;
+    width: 100%;
+    /*height: 100%;*/
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.tf-land-transaction-price {
+    position: absolute;
+    width: 100%;
+}
+
+/*------------ ---------- menu ------------ ---------- */
+.tf-land-menu {
+    position: absolute;
+    width: 150px;
+    height: 30px;
+    top: -32px;
+    left: 0;
+    z-index: 9999999;
+    display: none;
+}
+
+.tf-land-menu li ul li a {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.tf-land-menu li ul li a:hover {
+    color: White !important;
+    cursor: pointer;
+    background-color: #172d5a;
+}
+
+.tf-land-menu .tf-menu-icon {
+    font-size: 20px;
+}
+
+.tf-land-transaction-button {
+    height: 30px !important;
+    line-height: 30px !important;
+    padding-top: 0px !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    font-weight: bold;
+    background-color: #FFD700;
+}
+
+/*------------ ----------  build ------------ ---------- */
+.tf-select-building-sample .panel-heading, .tf-select-building-sample div {
+    margin: 0;
+    padding: 0;
+
+}
+
+.tf-select-building-sample .panel-body {
+    overflow: auto;
+}
+
+/*------------ ---------- Invite ------------ ------------ */
+.tf-land-invite-notify {
+    position: absolute;
+    top: -40px;
+    right: 0px;
+}

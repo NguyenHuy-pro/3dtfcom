@@ -1,0 +1,253 @@
+.page-tool {
+    margin: 0;
+}
+
+.tf-main-view-map {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+    background-color: grey;
+}
+
+/*
+.tf-map-header-business {
+    float: left;
+    position: relative;
+    padding: 0 10px;
+}
+*/
+
+.tf-build-content {
+    position: relative;
+    overflow: hidden;
+}
+
+/*notify*/
+.tf-map-notify-wrap {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    width: 450px;
+    padding: 0;
+}
+
+.tf-map-notify-wrap .panel-heading, .tf-map-notify-wrap .panel-footer {
+    height: 30px;
+    line-height: 30px !important;
+}
+
+/* =========== ========== ========== Filter =========== ========== ==========*/
+/*filter - business type*/
+.tf-map-business-type-filter {
+    position: absolute;
+    top: 42px;
+    right: 0;
+    min-width: 165px;
+    background-color: white;
+}
+
+.tf-map-business-type-object {
+    height: 24px;
+    line-height: 24px;
+    text-align: right;
+    padding-right: 8px;
+}
+
+.tf-map-business-type-object:hover {
+    cursor: pointer;
+    background-color: #172d5a;
+}
+
+.tf-map-business-object-wrap {
+    top: 0px;
+    left: -235px;
+    width: 235px;
+    overflow: auto;
+    display: none;
+    background-color: grey;
+    border: 1px solid #D7D7D7;
+}
+
+.tf-map-business-object {
+    height: 24px;
+    line-height: 24px;
+    padding-right: 17px;
+}
+/* =========== ========== ========== market =========== ========== ==========*/
+.tf-map-market-wrap {
+    position: absolute;
+    /*width: 280px;*/
+    margin: 0;
+    padding: 0;
+    right: 15px;
+    top: 0;
+}
+
+.tf-map-market-menu {
+    padding-right: 10px !important;
+    background-color: white !important;
+}
+
+.tf-map-market-menu select {
+    height: 20px;
+    background-color: white;
+    border: none;
+}
+
+.tf-map-market-content-top{
+    height: 30px !important;
+    line-height: 30px !important;
+    padding-right: 10px !important;
+    text-align: right;
+}
+
+.tf-map-market-container {
+    position: absolute;
+    width: 200px;
+    background-color: white;
+    right: 0px;
+    padding: 0 !important;
+}
+
+/* =========== ========== ========== mini map content ========== ============ ========== */
+.tf-mini-map {
+    position: absolute;
+    top: 0;
+    left: 0px;
+    z-index: 999999999;
+    background-color: grey;
+}
+
+.tf-mini-map-content {
+    position: relative;
+    margin: 25px;
+    width: 202px;
+    height: 202px;
+    background-color: #172d5a;
+}
+
+.tf-mini-map-project {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background-color: green;
+}
+
+.tf-mini-map-x {
+    position: absolute;
+    top: 25px;
+    z-index: 100;
+    width: 252px;
+    height: 1px;
+    background-color: red;
+}
+
+.tf-mini-map-y {
+    position: absolute;
+    top: 0;
+    left: 25px;
+    z-index: 100;
+    Width: 1px;
+    height: 252px;
+    background-color: red;
+}
+
+.tf-mini-map-location {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: white;
+}
+
+.tf-mini-map-location select {
+    border: none;
+}
+
+/*---------- move map ---------- */
+.tf-map-move-trend {
+    position: absolute;
+    font-size: 25px;
+    z-index: 999999999;
+}
+
+.tf-map-move-top {
+    top: 0;
+    left: 50%;
+    margin-left: -10px;
+}
+.tf-map-move-right {
+    top: 50%;
+    right: 5px;
+    margin-top: -10px;
+}
+.tf-map-move-bottom {
+    bottom: 20px;
+    left: 50%;
+    margin-left: -10px;
+}
+.tf-map-move-left {
+    top: 50%;
+    left: 5px;
+    margin-top: -10px;
+}
+
+/*---------- control map ----------- */
+.tf-control-map {
+    position: absolute;
+    right: 10px;
+    z-index: 999999;
+    height: 30px;
+    width: auto;
+    background-color: white;
+}
+
+.tf-control-icon {
+    width: 20px !important;
+    height: 20px !important;
+    margin: 5px;
+    color: #172d5a;
+}
+
+.tf-control-icon:hover {
+    cursor: pointer;
+}
+
+.tf-content-tool {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    width: 140px;
+    height: 550px;
+    overflow: auto;
+    z-index: 100000;
+    text-align: center;
+    border: 1px solid #A0A0A0;
+    background-color: white;
+}
+
+/*---------- publish project ----------*/
+.tf-control-wrap {
+    position: absolute;
+    top: 32px;
+    right: 0;
+    width: 350px;
+    border: 1px solid #ECECEC;
+    background-color: white;
+}
+
+.tf-control-wrap ul {
+    width: 100%;
+    color: white;
+    background-color: #172d5a;
+}
+
+.tf-control-wrap ul li {
+    height: 24px;
+    line-height: 24px;
+    list-style: none;
+    color: white;
+    padding: 0 10px;
+    display: inline-block;
+}

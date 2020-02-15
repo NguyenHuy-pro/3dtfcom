@@ -1,0 +1,18 @@
+.tf-public {
+    position: absolute;
+    right: 30px;
+    top: 300px;
+}
+
+.tf-public-act {
+    position: absolute;
+    top: 20px;
+    right: 0px;
+    text-align: center;
+}
+
+.tf-public-act ul li a:hover {
+    color: White;
+    cursor: pointer;
+    background-color: #172d5a !important;
+}

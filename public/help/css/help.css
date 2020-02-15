@@ -1,0 +1,75 @@
+.tf-help-wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    padding-bottom: 50px;
+}
+
+.tf-help {
+    background-color: white;
+    border: 1px solid #c2c2c2;
+}
+
+.tf-help-content {
+    min-height: 1000px;
+}
+
+.tf-help-title {
+    padding: 20px;
+}
+
+.tf-help-breadcrumb {
+    height: 36px;
+    line-height: 36px;
+    font-weight: bold;;
+    background-color: #172d5a;
+    color: white;
+}
+
+/*menu*/
+.tf-help-menu-action {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+    border-left: 1px dotted black;
+
+}
+
+/*object content*/
+.tf-help-content-wrap {
+    padding: 0 !important;
+    /*margin: 0 !important;*/
+    border-top: 1px dashed #d7d7d7 !important;
+}
+
+.tf-help-content-wrap .panel-heading {
+    /*background-color: brown !important;*/
+    border: none !important;
+}
+
+.tf-help-content-wrap .panel-body {
+    padding-top: 0 !important;
+}
+
+/*========= on top ========= */
+.tf-help-on-top {
+    position: fixed;
+    height: 30px;
+    line-height: 30px;
+    right: 20px;
+    bottom: 20px;
+    z-index: 999999;
+    background-color: grey;
+    border-radius: 5px;
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .tf-help-on-top {
+        right: 5px;
+    }
+}
+
+.tf-help-on-top a {
+    border-radius: 5px;
+}

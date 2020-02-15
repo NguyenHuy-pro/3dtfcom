@@ -1,0 +1,119 @@
+.tf-system-wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    padding-bottom: 50px;
+}
+
+.tf-system-content {
+    min-height: 600px;
+    background-color: white;
+}
+
+/*------------ menu ------------*/
+.tf-system-menu {
+    border-top: none;
+    background-color: #172d5a;
+}
+
+/* navbar */
+.navbar-primary .navbar {
+    border-bottom: none;
+}
+
+.navbar-primary .navbar .nav > li > a {
+    height: 40px;
+    line-height: 40px;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 0 !important;
+
+}
+
+.navbar-primary .navbar .nav > li > a:hover {
+    background-color: #172d5a;
+}
+
+.navbar-primary .navbar .nav.pull-right {
+    margin-left: 10px;
+    margin-right: 0;
+}
+
+.navbar-xs .navbar-primary .navbar {
+    min-height: 40px;
+    height: 40px;
+    margin-bottom: 10px !important;
+}
+
+.navbar-xs .navbar-primary .navbar .navbar-brand {
+    padding: 0px 12px;
+    font-size: 16px;
+    line-height: 40px;
+}
+
+.navbar-xs .navbar-primary .navbar .navbar-nav > li > a {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    line-height: 40px;
+}
+
+.navbar-xs .navbar-primary .navbar .navbar-toggle {
+    height: 40px;
+    margin: 0 20px !important;
+}
+
+.navbar-sm .navbar-primary .navbar {
+    min-height: 40px;
+    height: 40px;
+}
+
+.navbar-sm .navbar-primary .navbar .navbar-brand {
+    padding: 0px 12px;
+    font-size: 16px;
+    line-height: 40px;
+}
+
+.navbar-sm .navbar-primary .navbar .navbar-nav > li > a {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    line-height: 40px;
+}
+
+/*about*/
+.tf-system-about {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/*----------- Notify ---------*/
+.tf-notify-object{
+    padding: 0 !important;
+    margin: 0 !important;
+}
+.tf-notify-object tr td {
+    border: none !important;
+}
+
+/*========= on top ========= */
+.tf-system-on-top {
+    position: fixed;
+    height: 30px;
+    line-height: 30px;
+    right: 20px;
+    bottom: 20px;
+    z-index: 999999;
+    background-color: grey;
+    border-radius: 5px;
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .tf-system-on-top {
+        right: 5px;
+    }
+}
+
+.tf-system-on-top a {
+    border-radius: 5px;
+}

@@ -1,0 +1,41 @@
+.tf-m-build-building {
+    position: absolute;
+    bottom: 0px;
+}
+
+/*----------- name -----------*/
+.tf-m-build-building-name-wrap {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 20px;
+    border-radius: 4px;
+    line-height: 20px;
+    z-index: 100;
+    text-align: center;
+}
+
+.tf-m-build-building-detail {
+    min-width: 350px !important;
+    border-radius: 4px !important;
+    border: 1px solid #D7D7D7;
+}
+
+/*----------- menu -----------*/
+.tf-m-build-building-menu {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    display: none;
+    z-index: 9999999;
+}
+
+.tf-m-build-building-menu li a:hover {
+    background: none !important;
+}
+
+.tf-m-build-building-menu li ul li a:hover {
+    color: White !important;
+    cursor: pointer !important;
+    background-color: #172d5a !important;
+}

@@ -1,0 +1,18 @@
+/*--------public-------------*/
+.tf-m-build-public{
+    position: absolute;
+}
+.tf-m-build-public-menu{
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: center;
+    z-index: 9999999;
+    background-color: white;
+}
+.tf-m-build-public-menu ul li a:hover{
+    color: White;
+    cursor: pointer;
+    background-color: #172d5a;
+}
+/*---------End public -----------*/

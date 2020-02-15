@@ -1,0 +1,335 @@
+.tf-user-wrapper {
+    height: 100%;
+    overflow: auto;
+}
+
+/*---------- Posts ------------*/
+.tf-user-activity-posts-form-wrap {
+    margin-bottom: 10px;
+    border: 1px solid #c2c2c2;
+}
+
+.tf_user_activity_post_form .tf-action-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+}
+
+.tf-user-activity-object {
+    border: 1px solid #c2c2c2;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: white;
+}
+
+.tf-user-activity-object-statistic {
+    border-top: 1px solid #d7d7d7;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.tf-user-activity-posts-more {
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid #c2c2c2;
+    background-color: white;
+}
+
+.tf-user-more-info {
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid #c2c2c2;
+    background-color: white;
+}
+
+.tf-user-more-info:hover {
+    background-color: #172d5a;
+}
+
+/* ---------- ---------- TITLE CONTENT ---------- ---------- */
+.tf-user-content-title {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.tf-user-content-title tr td {
+    vertical-align: middle !important;
+}
+
+/*avatar*/
+.tf-user-title-avatar {
+    position: absolute;
+    border: 2px solid #d7d7d7 !important;
+    background-color: whitesmoke;
+    bottom: -10px;
+    left: 10px;
+    width: 100px;
+    height: 100px;
+    padding: 3px;
+    z-index: 1000;
+    border-radius: 10px;
+}
+
+.tf-user-title-avatar .tf-avatar {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.tf-user-avatar-menu-wrap {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+
+}
+
+.tf-user-avatar-menu-wrap ul li a {
+    font-size: 12px !important;
+}
+
+/*friend*/
+.tf-user-title-name {
+    position: absolute;
+    bottom: 0;
+    left: 130px;
+    z-index: 1000;
+}
+
+.tf-user-title-friend {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.tf-user-title-friend span {
+    border: 1px solid #d7d7d7;
+}
+
+/*banner*/
+.tf-user-title-banner {
+    height: 200px;
+    position: relative !important;
+    text-align: center;
+    padding: 0 !important;
+    background-color: black;
+    border: 1px solid #c2c2c2;
+
+}
+
+.tf-user-title-banner .tf-user-banner-image {
+    max-width: 100%;
+    max-height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+}
+
+.tf-user-banner-image-view {
+    padding: 0;
+    position: relative;
+    background-color: black;
+}
+
+.tf-user-banner-image-view img {
+    max-width: 100%;
+    max-height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.tf-user-banner-menu-wrap {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    z-index: 1000;
+}
+
+.tf-user-banner-menu-wrap ul li a {
+    font-size: 12px !important;
+}
+
+/* ---------- ---------- user menu ---------- ---------- */
+@media only screen and (max-width: 768px) {
+    .tf-user-menu {
+        display: none;
+    }
+}
+
+/*user content*/
+.tf-user-content {
+    /*min-height: 500px;*/
+    background-color: white;
+    padding: 0;
+}
+
+.tf-user-ads {
+    padding: 10px;
+}
+
+/*------------ ----------- building ------------ ------------ */
+.tf-user-building-object {
+    border: none !important;
+}
+
+.tf-user-building-object .tf-statistic .tf-icon {
+    color: grey;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.tf-user-building-object .tf-content {
+    max-width: 200px !important;
+    word-wrap: break-word;
+}
+
+/*------------ ---------- Follow ------------ ---------*/
+.tf-follow-object {
+    margin: 0 !important;
+}
+
+.tf-follow-object tr td {
+    padding-left: 0 !important;
+
+    border-top: none !important;
+    border-bottom: 1px solid #D7D7D7;
+}
+
+.tf-follow-object .tf-statistic .tf-icon {
+    color: grey;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* ---------- ---------- FRIEND ---------- ----------*/
+.tf-user-friend-object, .tf-user-friend-request-receive-object, .tf-user-friend-request-sent-object {
+    margin-bottom: 15px;
+}
+
+.tf-user-friend-object tr td, .tf-user-friend-request-receive-object tr td, .tf-user-friend-request-sent-object tr td {
+    border: none !important;
+}
+
+.tf-user-friend-object .tf-avatar, .tf-user-friend-request-receive-object .tf-avatar, .tf-user-friend-request-sent-object .tf-avatar {
+    height: 70px;
+    width: 70px;
+}
+
+/*========== ========== Information =========== ==========*/
+.tf-user-info-content .table tr td {
+    border: none !important;
+}
+
+/*========== ========== Image =========== ==========*/
+.tf-image-object {
+    /*background-color: black;*/
+    margin-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.tf-image-object .tf-image-object-wrap{
+    position: relative;
+    background-color: black;
+    height: 150px;
+}
+
+.tf-image-object .tf-image {
+    max-width: 100%;
+    max-height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.tf-image-object-image-view {
+    padding: 0;
+    position: relative;
+    background-color: black;
+}
+
+.tf-image-object-image-view img {
+    max-width: 100%;
+    max-height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.tf-image-object .tf-delete {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 16px;
+    border: 1px solid #d7d7d7;
+    display: none;
+}
+
+/*============ =========== Share ============ =========== */
+.tf-share-object {
+    margin: 0 !important;
+}
+
+.tf-share-object tr td {
+    border: none !important;
+    border-bottom: 1px solid #D7D7D7 !important;
+    vertical-align: middle !important;
+    word-wrap: break-word !important;
+}
+
+/*============ =========== Point ============ =========== */
+.tf-point-object {
+    margin: 0 !important;
+}
+
+.tf-point-object tr td {
+    border: none !important;
+    border-top: 1px solid #D7D7D7 !important;
+    vertical-align: middle !important;
+    word-wrap: break-word !important;
+}
+
+/*========= on top ========= */
+.tf-user-on-top {
+    position: fixed;
+    height: 30px;
+    line-height: 30px;
+    right: 20px;
+    bottom: 20px;
+    z-index: 999999;
+    background-color: grey;
+    border-radius: 5px;
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .tf-user-on-top {
+        right: 5px;
+    }
+}
+
+.tf-user-on-top a {
+    border-radius: 5px;
+}
+
+/*========== ========== Ads =========== ==========*/
+.tf-user-ads-object {
+    margin: 0;
+    border: none;
+}
+
+.tf-user-ads-object .tf-image {
+    max-width: 200px;
+    max-height: 100px;
+}

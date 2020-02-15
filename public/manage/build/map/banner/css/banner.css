@@ -1,0 +1,37 @@
+/*--------banner-------------*/
+.tf-m-build-banner{
+    position: absolute;
+}
+.tf-m-build-banner-icon-new{
+    top: 0;
+    left: 0;
+}
+.tf-m-build-banner-transaction{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: red;
+}
+/*menu*/
+.tf-m-build-banner-menu{
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: center;
+    z-index: 9999999;
+    background-color: white;
+}
+.tf-m-build-banner-menu ul li a:hover{
+    color: White;
+    cursor: pointer;
+    background-color: #172d5a;
+}
+
+.tf-m-build-banner-image{
+    position: absolute;
+    top: 7px;
+    left: 6px;
+}
+/*---------End banner -----------*/

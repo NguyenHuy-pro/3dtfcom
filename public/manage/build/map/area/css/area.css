@@ -1,0 +1,18 @@
+/*-------area-------- */
+.tf-m-build-area{
+    position: absolute;
+}
+.tf-m-build-area-mask{
+    top: 0;
+    left: 0;
+    z-index: 999999999;
+}
+/*------- area info ------ */
+.tf-m-build-area-info{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.tf-m-build-area-info:hover{
+    background-color: grey;
+}

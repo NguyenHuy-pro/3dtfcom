@@ -1,0 +1,30 @@
+.tf-design-wrap{
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #d7d7d7;
+}
+.tf-design-content{
+    min-height: 1000px;
+    background-color: white;
+}
+.tf-design-top img{
+    max-height: 200px;
+    margin: 16px 0;
+
+}
+/*
+.tf-design-menu{
+    height: 40px;
+    line-height: 40px;
+    font-weight: bold; ;
+    background-color: #d7d7d7 !important;
+}
+.tf-design-menu ul li a{
+    margin-top: 0;
+    padding-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    color: #172d5a;
+}
+*/

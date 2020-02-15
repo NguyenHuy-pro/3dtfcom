@@ -1,0 +1,185 @@
+.tf-banner {
+    position: absolute;
+    cursor: pointer;
+}
+
+.tf-banner-view {
+    border: dashed red 2px;
+}
+
+/*information*/
+.tf-banner-information {
+    position: absolute;
+    width: 300px;
+    height: 170px;
+    top: -205px;
+    left: 0;
+    background-color: white;
+    border-radius: 5px;
+    /*border-left: dashed 3px red;*/
+    display: none;
+}
+
+.tf-banner-information:after, .tf-banner-information:before {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    content: " ";
+    height: 0;
+    width: 0;
+    border: solid transparent;
+}
+
+.tf-banner-information:after {
+    border-top-color: white;
+    border-width: 10px;
+    margin-left: 19px;
+}
+
+.tf-banner-information:before {
+    border-top-color: #A0A0A0;
+    border-width: 11px;
+    margin-left: 18px;
+}
+
+.tf-banner-information table {
+    height: 100%;
+}
+
+.tf-banner-information table tr th {
+    border: none !important;
+    vertical-align: middle;
+    height: 40px;
+}
+
+.tf-banner-information table tr td {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    height: 40px;
+    vertical-align: middle;
+}
+
+/* ---------- image ---------- */
+.tf-banner-image-wrap {
+    position: absolute;
+}
+
+.tf-banner-image-wrap .tf-banner-image {
+    background-color: black;
+}
+
+.tf-banner-image img {
+    max-width: 100%;
+    max-height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.tf-banner-image-view {
+    position: relative;
+    padding: 0;
+    background-color: black;
+}
+
+.tf-banner-image-view img {
+    max-width: 100%;
+    max-height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*menu*/
+.tf-banner-menu {
+    position: absolute;
+    width: 200px;
+    height: 30px;
+    top: -32px;
+    left: 0;
+    display: none;
+    z-index: 9999999;
+}
+
+.tf-banner-transaction-button {
+    height: 30px !important;
+    line-height: 30px !important;
+    padding-top: 0 !important;
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+    font-weight: bold;
+    background-color: #FFD700;
+}
+
+.tf-banner-menu li ul li a:hover {
+    color: White !important;
+    cursor: pointer !important;
+    background-color: #172d5a !important;
+}
+
+.tf-banner-menu-icon {
+    font-size: 30px;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.tf-banner-icon-publish {
+    position: absolute;
+    margin-left: 50%;
+    left: -32px;
+    bottom: 0;
+}
+
+.tf-banner-invite-notify {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: none;
+    z-index: 99999999;
+}
+
+/*
+.tf-banner-invite-notify {
+    position: absolute;
+    width: 330px;
+    height: 130px;
+    line-height: 130px;
+    top: -155px;
+    background-color: white;
+    border-radius: 10px;
+    z-index: 99999999;
+}
+
+.tf-banner-invite-notify:after, .tf-banner-invite-notify:before {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    content: " ";
+    height: 0;
+    width: 0;
+    border: solid transparent;
+}
+
+.tf-banner-invite-notify:after {
+    border-top-color: white;
+    border-width: 10px;
+    margin-left: 19px;
+}
+
+.tf-banner-invite-notify:before {
+    border-top-color: #A0A0A0;
+    border-width: 11px;
+    margin-left: 18px;
+}
+*/
+/*access status*/
+.tf-banner-view-red {
+    border: dashed red 2px;
+}
+
+.tf-banner-view-white {
+    outline: 3px dashed red;
+    border: dotted yellow 2px;
+}

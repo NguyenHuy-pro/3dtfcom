@@ -1,0 +1,29 @@
+/* ------- header ----- */
+.tf-m-build-header{
+    position: relative;
+    height: 36px;
+    line-height: 36px;
+    top: 0;
+    left: 0;
+    background-color: #172d5a !important;
+    z-index: 9999999999;
+}
+.tf-m-build-header-lef {
+    float: left;
+}
+.tf-m-build-main{
+    position: relative;
+    background-color: brown;
+}
+
+/*-----load status--------*/
+.tf-m-build-load-status{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    margin-left: 50%;
+    left: -50px;
+    top: 50px;
+    z-index: 99999999999;
+    display: none;
+}

@@ -1,0 +1,17 @@
+.header-3d {
+    background-color: #172d5a;
+}
+
+.page-tool {
+    margin: 0;
+}
+
+.tf-loading-status {
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    top: 200px;
+    left: 50%;
+    margin-left: -50px;
+    display: none;
+}

@@ -1,0 +1,212 @@
+.page-tool {
+    margin: 0;
+}
+
+/* ====================== header ===================== */
+.tf-m-build-view-map {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+    background-color: #172d5a;
+}
+
+.tf-build-content {
+    position: relative;
+    overflow: hidden;
+}
+
+.tf-coordinates {
+    height: 36px;
+    line-height: 36px;
+    padding: 8px;
+}
+
+.tf-coordinates input {
+    width: 32px;
+    height: 20px;
+    border: none;
+}
+
+/* =========== ========== mini map content ============ ========== */
+.tf-m-build-mini-map {
+    position: absolute;
+    width: auto;
+    height: 300px;
+    top: 200px;
+    left: 0px;
+    z-index: 999999999;
+}
+
+.tf-m-build-mini-content {
+    position: relative;
+    float: left;
+    width: 300px;
+    height: 300px;
+    background-color: whitesmoke;
+    display: none;
+}
+
+.tf-m-build-mini-wrap {
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    z-index: 10;
+    width: 200px;
+    height: 200px;
+    background-color: #112945;
+}
+
+.tf-m-build-mini-map-project {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background-color: green;
+}
+
+.tf-m-build-mini-x {
+    position: absolute;
+    z-index: 100;
+    width: 300px;
+    height: 1px;
+    background-color: red;
+}
+
+.tf-m-build-mini-y {
+    position: absolute;
+    z-index: 100;
+    Width: 1px;
+    height: 300px;
+    background-color: red;
+}
+
+.tf-m-build-mini-label {
+    width: 10px;
+    height: 300px;
+    background-color: blue;
+    float: left;
+}
+
+/* ===================== move map ===================== */
+.tf-m-build-move-map {
+    position: absolute;
+    height: 96px;
+    width: 192px;
+    bottom: 20px;
+    left: 0px;
+    z-index: 999999999;
+}
+
+.tf-m-build-move-icon {
+    position: absolute;
+    width: 64px;
+    height: 32px;
+}
+
+.tf-m-build-move-icon:hover {
+    cursor: pointer;
+}
+
+.tf-m-build-move-top {
+    top: 0px;
+    left: 64px;
+    background: url('../../../../main/icons/top_1.gif') bottom no-repeat;
+}
+
+.tf-m-build-move-top:hover {
+    background: url('../../../../main/icons/top.gif') center no-repeat;
+}
+
+.tf-m-build-move-left {
+    top: 32px;
+    left: 0px;
+    background: url('../../../../main/icons/left_1.gif') right no-repeat;
+}
+
+.tf-m-build-move-left:hover {
+    background: url('../../../../main/icons/left.gif') center no-repeat;
+}
+
+.tf-m-build-move-center {
+    top: 32px;
+    left: 64px;
+    background: url('../../../../main/icons/center_1.gif') center no-repeat;
+}
+
+.tf-m-build-move-center:hover {
+    background: url('../../../../main/icons/center.gif') center no-repeat;
+}
+
+.tf-m-build-move-right {
+    top: 32px;
+    left: 128px;
+    background: url('../../../../main/icons/right_1.gif') left no-repeat;
+}
+
+.tf-m-build-move-right:hover {
+    background: url('../../../../main/icons/right.gif') center no-repeat;
+}
+
+.tf-m-build-move-bottom {
+    top: 64px;
+    left: 64px;
+    background: url('../../../../main/icons/bottom_1.gif') top no-repeat;
+}
+
+.tf-m-build-move-bottom:hover {
+    background: url('../../../../main/icons/bottom.gif') center no-repeat;
+}
+
+/* ===================== control map ====================== */
+.tf-m-build-tool-menu {
+    position: absolute;
+    right: 0;
+    z-index: 999;
+    height: 30px;
+    width: auto;
+    background-color: white;
+}
+
+.tf-m-build-tool-menu-icon {
+    width: 20px !important;
+    height: 20px !important;
+    margin: 5px;
+    color: #172d5a;
+}
+
+.tf-m-build-tool-menu-icon:hover {
+    cursor: pointer;
+}
+
+/*build tool*/
+.tf-m-build-tool-build-wrap {
+    position: absolute;
+    top: 30px;
+    right: 0px;
+    width: 140px;
+    overflow: auto;
+    z-index: 100000;
+    text-align: center;
+    border: 1px solid #A0A0A0;
+    background-color: white;
+}
+
+.tf-m-build-control-sample {
+    width: 96px;
+    height: 64px;
+}
+
+.tf-m-build-tool-build-content {
+    overflow: auto;
+}
+
+/*manage tool*/
+.tf-m-build-tool-manage-wrap {
+    position: absolute;
+    top: 32px;
+    right: 0px;
+    width: 350px;
+    border: 1px solid #ECECEC;
+    background-color: white;
+}

@@ -1,0 +1,38 @@
+/*-------land-------- */
+.tf-m-build-land{
+    position:absolute;
+    text-align: center;
+}
+.tf-m-build-land-icon-new{
+    top: 0;
+    left: 0;
+}
+/*menu*/
+.tf-m-build-land-menu{
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: center;
+    z-index: 9999999;
+    background-color: white;
+}
+.tf-m-build-land-menu ul li a:hover{
+    color: White;
+    cursor: pointer;
+    background-color: #172d5a;
+}
+/*-------end land------ */
+
+/*icon image*/
+.tf-m-build-land-icon{
+    position: relative;
+    bottom: 0px;
+}
+.tf-m-build-land-price{
+    position: absolute;
+    top: -20px;
+    width: 100%;
+    line-height: 25px;
+    text-align: center;
+    font-weight: bold;
+}

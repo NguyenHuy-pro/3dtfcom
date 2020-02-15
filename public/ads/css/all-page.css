@@ -1,0 +1,32 @@
+.tf-ads-all-banner-wrap {
+    position: relative;
+    /*border: 1px solid #c2c2c2;*/
+}
+
+.tf-ads-all-banner-wrap .tf-menu{
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.tf-ads-all-banner-wrap .tf-menu-icon{
+    width: 20px;
+    height: 20px;
+}
+
+.tf-ads-all-banner-wrap .tf-menu-content{
+    position: absolute;
+    z-index: 10;
+    top: 20px;
+    left: 0;
+    width: 130px;
+    display: none;
+}
+.tf-ads-all-banner-wrap .tf-menu-content .list-group-item{
+    padding: 0 10px 0 10px !important;
+    text-align: left;
+    height: 30px !important;
+    line-height: 30px !important;
+}

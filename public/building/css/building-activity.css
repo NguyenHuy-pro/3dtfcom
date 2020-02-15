@@ -1,0 +1,157 @@
+/*---------- Posts ------------*/
+.tf-building-posts-form-wrap {
+    margin-bottom: 10px;
+    border: 1px solid #c2c2c2;
+}
+
+#tfBuildingPostsForm .tf-action-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+}
+
+.tf-building-posts-object {
+    border: 1px solid #c2c2c2;
+    border-radius: 5px;
+    padding-bottom: 0 !important;
+}
+
+.tf-building-posts-object-statistic {
+    border-top: 1px solid #d7d7d7;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.tf-building-activity-content-more {
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid #c2c2c2;
+    background-color: white;
+    margin-bottom: 10px;
+}
+
+/*post image*/
+.tf-posts-image {
+    height: 500px;
+    /*background-color: whitesmoke;*/
+}
+
+.tf-posts-image-show-top-1 {
+    height: 500px;
+    border: 1px solid #d7d7d7;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+}
+
+.tf-posts-image-show-top-2 {
+    height: 300px;
+    border: 1px solid #d7d7d7;
+    overflow: hidden;
+    padding: 0;
+}
+
+.tf-posts-image-show-bot {
+    height: 200px;
+    border: 1px solid #d7d7d7;
+    overflow: hidden;
+    padding: 0;
+}
+
+.tf-posts-image-show-top-1 img, .tf-posts-image-show-top-2 img, .tf-posts-image-show-bot img {
+    /*max-width: 100%;*/
+    /*max-height: 100%;*/
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    padding: 20px;
+    transform: translate(-50%, -50%)
+    /*height: 100% !important;*/
+    /*width: auto;*/
+}
+
+/*---------- detail ------------*/
+.tf-building-post-detail {
+    min-height: 500px;
+    background-color: white;
+}
+
+
+
+/*-----------------multiple upload image of poast-------------------------------*/
+.tf-building-post-mul-image-add-preview {
+    background-color: white;
+    /*overflow-x: scroll;*/
+    height: 80px;
+    display: none;
+}
+
+.tf-preview-mul-image {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    /*float: left;*/
+    margin: 3px;
+    display: inline-block;
+    border: 2px solid #d7d7d7;
+}
+
+.tf-preview-mul-image .tf-img {
+    width: 100%;
+    height: 100%;
+}
+
+.tf-preview-mul-image .tf-delete {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 1px solid white;
+}
+
+.tf_building_post_plus_image {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    /*float: left;*/
+    margin: 3px;
+    display: inline-block;
+    border: 2px solid #d7d7d7;
+}
+
+/*activty - articles*/
+.tf-building-activity-articles {
+    border: 1px solid #c2c2c2;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.tf-building-activity-articles table {
+    border: none;
+}
+
+.tf-building-activity-articles .tf-image {
+    border: none !important;
+    text-align: center;
+}
+
+.tf-building-activity-articles .tf-short-description {
+    border-top: none !important;
+    font-size: 1.5em;
+    text-align: center;
+    border-bottom: 1px solid #d7d7d7;
+}
+
+.tf-building-activity-articles .tf-name {
+    border: none !important;
+}
+
+.tf-building-activity-articles .tf-statistic {
+    border: none;
+    padding-top: 0;
+    padding-bottom: 0;
+}
