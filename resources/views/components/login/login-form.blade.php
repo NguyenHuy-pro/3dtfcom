@@ -55,13 +55,13 @@ $moBileDetect = new Mobile_Detect();
                 <div class="text-center col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <span class="tf-color-grey">Or</span>
                 </div>
-                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                {{--<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                     <a class="btn btn-default tf-link-full tf-link-hover-white tf-bg-hover text-center"
                        style="border-color: blue;" href="{!! route('tf.register.facebook.get') !!}">
                         Facebook
                     </a>
-                </div>
-                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                </div>--}}
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <a class="btn btn-default tf-link-full tf-link-hover-white tf-bg-hover text-center"
                        style="border-color: orangered;" href="{!! route('tf.register.google.get') !!}">
                         Google+

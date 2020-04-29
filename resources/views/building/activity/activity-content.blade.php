@@ -24,15 +24,13 @@ $dateTake = $hFunction->createdAt();
 # get posts of building
 $buildingActivityList = $dataBuilding->activityOfBuilding($buildingId, $take, $dateTake);
 $buildingActivityHighlight = $dataBuilding->activityHighlightOfBuilding($buildingId);
+if (count($buildingActivityHighlight) > 0) {
+    $dataBuildingPost = $buildingActivityHighlight;
+}
 ?>
 <div id="tf_building_activity_content" class="tf-padding-none col-xs-12 col-sm-12 col-md-12 col-lg-12"
      style="background: #d7d7dd;"
      data-building="{!! $buildingId !!}">
-    @if(count($buildingActivityHighlight) > 0)
-        <?php $dataBuildingPost = $buildingActivityHighlight; ?>
-
-    @endif
-
     @if(count($buildingActivityList) > 0)
         @foreach($buildingActivityList as $dataBuildingActivity)
             @if($dataBuildingActivity->checkActivityPost())

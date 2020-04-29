@@ -16,10 +16,10 @@ use App\Models\Manage\Content\Users\Card\TfUserCard;
 use App\Models\Manage\Content\Users\Image\TfUserImage;
 use Illuminate\Support\Facades\Session;
 
-//use Illuminate\Http\Request;
+use Illuminate\Http\Request;
 use Input;
 use File;
-use Request;
+//use Request;
 use DB, Mail;
 
 class RegisterController extends Controller
@@ -36,12 +36,12 @@ class RegisterController extends Controller
 
     }
 
-    public function postRegister()
+    public function postRegister(Request $request)
     {
-        $modelAbout = new TfAbout();
-        $modelUser = new TfUser();
         $hFunction = new \Hfunction();
         $mailObject = new \Mail3dtf();
+        $modelAbout = new TfAbout();
+        $modelUser = new TfUser();
         $modelUserImageType = new TfUserImageType();
         $modelUserImage = new TfUserImage();
         $modelBannerShareView = new TfBannerShareView();
@@ -50,16 +50,16 @@ class RegisterController extends Controller
         $modelLandLicenseInvite = new TfLandLicenseInvite();
         $modelBuildingShareView = new TfBuildingShareView();
 
-        $firstName = Request::input('txtFirstName');
-        $lastName = Request::input('txtLastName');
-        $account = Request::input('txtAccount');
-        $password = Request::input('txtPassword');
-        $birthday = Request::input('txtBirthday');
-        $gender = Request::input('txtGender');
-        $avatar = Request::file('txtImage');
-        $reserveObjectName = Request::input('reserveObjectName');
-        $reserveObjectId = Request::input('reserveObjectID');
-        $token = null;// Request::input('_token');
+        $firstName = $request->input('txtFirstName');
+        $lastName = $request->input('txtLastName');
+        $account = $request->input('txtAccount');
+        $password = $request->input('txtPassword');
+        $birthday = $request->input('txtBirthday');
+        $gender = $request->input('txtGender');
+        $avatar = $request->file('txtImage');
+        $reserveObjectName = $request->input('reserveObjectName');
+        $reserveObjectId = $request->input('reserveObjectID');
+        $token = null;// $request->input('_token');
 
         // check exist account
         if ($modelUser->existAccount($account)) { // have exists account
@@ -144,11 +144,11 @@ class RegisterController extends Controller
                     or copy and paste the link below into your browsers address bar.
 
                     Thanks!";
-                    $mailObject->sendFromGmail("Welcome to system 3DTF.COM", $account, $content);
+                    $mailObject->sendEmailInfo3D("Welcome to system 3DTF.COM", $account, $content);
 
                     ##------------- ------------ process avatar ------------- ------------
                     if (!empty($avatar)) { // have select avatar
-                        $file = Request::file('txtImage');
+                        $file = $request->file('txtImage');
                         $imageName = $file->getClientOriginalName();
                         $imageName = $hFunction->alias($firstName . '-' . $lastName) . '-' . $hFunction->getTimeCode() . "." . $hFunction->getTypeImg($imageName);
                         if ($modelUserImage->uploadImage($file, $imageName, 200)) {

@@ -64,19 +64,25 @@ if (count($dataAbout) > 0) {
                                     ?>
                                 </div>
                             @endif
-                            <div class="form-group">
-                                <label>
-                                    {!! trans('frontend.register_label_first_name') !!} <span
-                                            class="tf-color-red">*</span>:
-                                </label>
-                                <input id="txtFirstName" class="form-control" type="text" name="txtFirstName"/>
-                            </div>
-                            <div class="form-group">
-                                <label>
-                                    {!! trans('frontend.register_label_last_name') !!} <span
-                                            class="tf-color-red">*</span>:
-                                </label>
-                                <input class="form-control" type="text" name="txtLastName" value=""/>
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                    <div class="form-group">
+                                        <label>
+                                            {!! trans('frontend.register_label_first_name') !!} <span
+                                                    class="tf-color-red">*</span>:
+                                        </label>
+                                        <input id="txtFirstName" class="form-control" type="text" name="txtFirstName"/>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                    <div class="form-group">
+                                        <label>
+                                            {!! trans('frontend.register_label_last_name') !!} <span
+                                                    class="tf-color-red">*</span>:
+                                        </label>
+                                        <input class="form-control" type="text" name="txtLastName" value=""/>
+                                    </div>
+                                </div>
                             </div>
                             <div class="form-group">
                                 <label>
@@ -135,12 +141,11 @@ if (count($dataAbout) > 0) {
                         <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
                             <div class="form-group tf-padding-top-10 " style="border-top: 5px solid #D7D7D7">
                                 <label>or Sign up</label>
-                                <br/>
-                                <br/>
+                                {{--<br/>
                                 <a class="btn btn-default tf-link-full tf-link-hover-white tf-bg-hover text-center"
                                    style="border-color: blue;" href="{!! route('tf.register.facebook.get') !!}">
                                     Facebook
-                                </a>
+                                </a>--}}
                                 <br/>
                                 <a class="btn btn-default tf-link-full tf-link-hover-white tf-bg-hover text-center"
                                    style="border-color: orangered;" href="{!! route('tf.register.google.get') !!}">

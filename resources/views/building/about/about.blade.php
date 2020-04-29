@@ -23,6 +23,7 @@ $userBuildingId = $dataUserBuilding->userId();
 $buildingId = $dataBuilding->buildingId();
 $buildingSampleImage = $dataBuilding->buildingSample->pathImage();
 $alias = $dataBuilding->alias();
+$buildingName = $dataBuilding->name();
 $shortDescription = $dataBuilding->shortDescription();
 $website = $dataBuilding->website();
 
@@ -76,7 +77,7 @@ $settingBuildingStatus = (isset($dataBuildingAccess['settingBuilding'])) ? $data
 @endsection
 
 @section('titlePage')
-    {!! $shortDescription !!}
+    {!! $buildingName !!}
 @endsection
 
 {{--title of building--}}
@@ -106,6 +107,13 @@ $settingBuildingStatus = (isset($dataBuildingAccess['settingBuilding'])) ? $data
     <div id="tf_building_about" class="tf-building-about col-xs-12 col-sm-12 col-md-12 col-lg-12"
          data-building="{!! $buildingId !!}">
         <table class="table">
+            <tr>
+                <td class="tf-border-none">
+                    <a class="tf_test_mobi" href="#">
+                        Test trên mobi
+                    </a>
+                </td>
+            </tr>
             @if($ownerStatus)
                 <tr>
                     <td class="tf-border-none text-right">

@@ -127,7 +127,7 @@ class TfBuildingComment extends Model
     public function getInfo($commentId = '', $field = '')
     {
         if (empty($commentId)) {
-            return null;
+            return TfBuildingComment::get();
         } else {
             $result = TfBuildingComment::where('comment_id', $commentId)->first();
             if (empty($field)) {

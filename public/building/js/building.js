@@ -230,6 +230,13 @@ var tf_building = {
 
 //========== ========== ========== Begin ========== ========== ==========
 $(document).ready(function () {
+    $('body').on('click', '#tf_building_about .tf_test_mobi', function(){
+        alert('yesssssss');
+    });
+});
+
+
+$(document).ready(function () {
     autosize(document.querySelectorAll('textarea'));
     $('body').on('click', '#tf_building_wrapper', function () {
         tf_master.containerRemove();

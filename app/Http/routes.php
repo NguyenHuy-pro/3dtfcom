@@ -1927,15 +1927,13 @@ Route::group(['prefix' => '3dtf'], function () {
 
         Route::get('/', ['as' => 'tf.system.notify.get', 'uses' => 'System\SystemController@getNotify']);
 
-
     });
 
     //contact
     Route::group(['prefix' => 'contact'], function () {
+        Route::get('/', ['as' => 'tf.system.contact.get', 'uses' => 'System\SystemController@getContact']);
         // add contact
         Route::post('add', ['as' => 'tf.system.contact.add.post', 'uses' => 'System\SystemController@addContact']);
-
-        Route::get('/', ['as' => 'tf.system.contact.get', 'uses' => 'System\SystemController@getContact']);
     });
 });
 
@@ -2268,7 +2266,7 @@ Route::group(['prefix' => 'map'], function () {
 
         // Invite
         Route::group(['prefix' => 'invite'], function () {
-            //outside the system
+            //access banner from outside the system
             Route::get('access/{inviteCode?}', ['as' => 'tf.map.banner.invite.access', 'uses' => 'Map\Banner\BannerInviteController@accessInvite']);
 
             //invite confirm

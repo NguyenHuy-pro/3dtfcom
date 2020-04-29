@@ -39,7 +39,7 @@ class ArticlesController extends Controller
 
         if ($modelUser->checkLogin() && count($dataBuilding) > 0) {
             $buildingId = $dataBuilding->buildingId();
-            $modelBuildingVisitHome->insert($buildingId, $modelUser->loginUserId());
+            //$modelBuildingVisitHome->insert($buildingId, $modelUser->loginUserId());
             $take = 10;
             $dateTake = $hFunction->createdAt();
             $dataBuildingArticles = $dataBuilding->articlesInfoOfBuilding($buildingId, $take, $dateTake, $typeId, $keyword);

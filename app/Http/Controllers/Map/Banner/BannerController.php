@@ -81,7 +81,6 @@ class BannerController extends Controller
             # set load area into history
             $modelArea->setMainHistoryArea($dataProject->areaId());
             return view('map.map', compact('modelAbout', 'modelUser', 'modelProvince', 'modelArea', 'dataMapAccess'));
-
         } else {
             return redirect()->back();
         }

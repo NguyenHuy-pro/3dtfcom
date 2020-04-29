@@ -13,8 +13,7 @@
 @extends('components.container.contain-action-8')
 @section('tf_main_action_content')
     <form id="frmMapBannerInviteConfirm" name="frmMapBannerInviteConfirm" role="form"
-          class="panel panel-default tf-border-none tf-padding-none tf-margin-bot-none "
-          method="post"
+          class="panel panel-default tf-border-none tf-padding-none tf-margin-bot-none " method="post"
           action="{!! route('tf.map.banner.invite.confirm.post', $dataBannerLicenseInvite->inviteId()) !!}">
         <div class="panel-heading tf-bg tf-color-white tf-border-none ">
             <i class="fa fa-gift tf-font-size-16"></i> &nbsp;

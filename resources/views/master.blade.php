@@ -11,7 +11,7 @@ if ($modelUser->checkLogin()) {
 }
 
 ?>
-        <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" itemscope itemtype="http://schema.org/Article">
 <head>
 
@@ -102,13 +102,14 @@ if ($modelUser->checkLogin()) {
     <script src="{{ url('public/main/js/func_ckfinder.js')}}"></script>
 
     {{-- google adsence --}}
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    {{--<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <script>
         (adsbygoogle = window.adsbygoogle || []).push({
             google_ad_client: "ca-pub-4036003575293148",
             enable_page_level_ads: true
         });
-    </script>
+    </script>--}}
+    {{-- end google adsence --}}
 </head>
 
 <body id="tf_body" data-log="{!! route('tf.login.status.check') !!}" data-status="{!! $loginStatus !!}"

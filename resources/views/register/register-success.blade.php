@@ -36,9 +36,11 @@ if (count($dataAbout) > 0) {
             <div class="col-md-8 col-md-offset-2" style="min-height:1000px;">
                 <div class="panel panel-default tf-margin-top-32 tf-margin-bot-32">
                     <div class="panel-body text-center tf-padding-32" >
-                        Success register, Please <span class="tf-color-red">check</span> your email to verify account.<br/>
+                        <span>Success register, Please</span> <span class="tf-color-red">check</span> <span>your email to verify account.</span><br/>
                         <em class="tf-color-red">(If you don't find in inbox, please check in Spam)</em>
-                        Go to <a class="tf-link tf-text-under" href="{!! route('tf.home')  !!}"> Map </a>
+                        <p>
+                            Go to <a class="tf-link tf-text-under" href="{!! route('tf.home')  !!}"> Map </a>
+                        </p>
                     </div>
                 </div>
             </div>

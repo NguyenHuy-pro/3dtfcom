@@ -31,17 +31,17 @@ class AreaController extends Controller
         $loadArea = explode(',', $newArea);
 
         # get info of new areas
-        $area = TfArea::whereIn('area_id', $loadArea)->get();
+        $area = $modelArea->getInfoFromListAreaId($loadArea);
         $dataMapAccess = [
             'provinceAccess' => $provinceAccess,
             'areaAccess' => $areaAccess,
             'projectAccess' => null,
             'landAccess' => null,
-            'bannerAccess' =>null,
+            'bannerAccess' => null,
             'businessTypeAccess' => $modelBusinessType->getAccess()
         ];
 
-        if (count($area) > 0) {
+        if ($hFunction->checkCount($area)) {
             foreach ($area as $key => $dataArea) {
                 echo view('map.area.area', compact('modelUser', 'modelProvince', 'modelArea', 'dataArea', 'dataMapAccess'));
             }
@@ -68,7 +68,7 @@ class AreaController extends Controller
         $loadArea = explode(',', $newArea);
 
         # get info of new areas
-        $area = TfArea::whereIn('area_id', $loadArea)->get();
+        $area = $modelArea->getInfoFromListAreaId($loadArea);
         $dataMapAccess = [
             'provinceAccess' => $provinceAccessId,
             'areaAccess' => $areaAccessId,
@@ -77,7 +77,7 @@ class AreaController extends Controller
             'bannerAccess' => null
         ];
 
-        if (count($area) > 0) {
+        if ($hFunction->checkCount($area)) {
             foreach ($area as $key => $dataArea) {
                 return view('map.area.area', compact('modelUser', 'modelProvince', 'modelArea', 'dataArea', 'dataMapAccess'));
             }
@@ -94,23 +94,25 @@ class AreaController extends Controller
     }
 
     #========== ========== =========== Zoom =========== =========== ========
-    public function getZoom($provinceId = null, $areaId=null, $provinceTop = null, $provinceLeft = null)
+    public function getZoom($provinceId = null, $areaId = null, $provinceTop = null, $provinceLeft = null)
     {
         $modelArea = new TfArea();
-        if (!empty($provinceId) && !empty($areaId)) {
-            $dataProvince = TfProvince::find($provinceId);
-            $dataAreaAccess = TfArea::find($areaId);
-            if (count($dataAreaAccess) > 0) {
-                $areaId = $dataAreaAccess->areaId();
-                # get around area ->return string area Id
-                $listArea = $modelArea->selectiveArea($areaId);
-                # convert to array
-                $loadArea = explode(',', $listArea);
+        if (!empty($provinceId)) {
+            if (!empty($areaId)) {
+                $dataProvince = TfProvince::find($provinceId);
+                $dataAreaAccess = TfArea::find($areaId);
+                if (count($dataAreaAccess) > 0) {
+                    $areaId = $dataAreaAccess->areaId();
+                    # get around area ->return string area Id
+                    $listArea = $modelArea->selectiveArea($areaId);
+                    # convert to array
+                    $loadArea = explode(',', $listArea);
 
-                # get info of new areas
-                $dataArea = TfArea::whereIn('area_id', $loadArea)->get();
-                return view('map.area.zoom.content', compact('modelArea', 'dataArea', 'dataProvince','dataAreaAccess', 'provinceTop', 'provinceLeft'));
+                    # get info of new areas
+                    $dataArea = $modelArea->getInfoFromListAreaId($loadArea);
+                    return view('map.area.zoom.content', compact('modelArea', 'dataArea', 'dataProvince', 'dataAreaAccess', 'provinceTop', 'provinceLeft'));
 
+                }
             }
         }
     }

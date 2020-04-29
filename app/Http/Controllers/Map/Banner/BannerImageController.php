@@ -116,7 +116,9 @@ class BannerImageController extends Controller
         $imageId = Request::input('bannerImage');
         $badInfoId = Request::input('badInfo');
         $userId = $modelUser->loginUserId();
-        $modelBannerBadInfoReport->insert($imageId, $userId, $badInfoId);
+        if(!empty($userId)){
+            $modelBannerBadInfoReport->insert($imageId, $userId, $badInfoId);
+        }
     }
 
 #=========== ========= ========== EDIT INFO ============ ========== ==========
@@ -198,7 +200,6 @@ class BannerImageController extends Controller
         $modelBannerImage = new TfBannerImage();
         $modelBannerLicense = new TfBannerLicense();
         $modelBannerImageVisit = new TfBannerImageVisit();
-
         $dataBannerImage = $modelBannerImage->getInfo($imageId);
         $accessIP = $hFunction->getClientIP();
         //when user was logged
@@ -209,7 +210,6 @@ class BannerImageController extends Controller
             $visitUserId = $modelUser->loginUserId();
             $bannerId = $dataBannerImage->bannerId();
             //banner of user login
-
             if ($modelBannerLicense->existBannerOfUser($visitUserId, $bannerId)) {
                 $visitStatus = false;   # disable visit
             }

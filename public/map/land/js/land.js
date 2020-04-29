@@ -87,13 +87,12 @@ var tf_land = {
         tf_banner.information.hideAll();
     },
     mouseOut: function (landObject) {
-        /*
-         //This land does not have a building that it is accessing.
-         if($(landObject).find('.tf_building_access_focus').length == 0){
-         tf_main.tf_hide_top($(landObject));
-         }
-         */
-        tf_main.tf_hide_top($(landObject));
+        //This land does not have a building that it is accessing.
+        if ($(landObject).find('.tf_building_access_focus').length == 0) {
+            tf_main.tf_hide_top($(landObject));
+        }
+
+        //tf_main.tf_hide_top($(landObject));
 
     },
     onClick: function (landObject) {
@@ -551,9 +550,9 @@ var tf_land = {
 
             //set position
             //set bottom - left
-            if(tf_master.footer.titleObject().length > 0){
+            if (tf_master.footer.titleObject().length > 0) {
                 var footerTitleHeight = tf_master.footer.titleObject().outerHeight();
-            }else{
+            } else {
                 var footerTitleHeight = 0;
             }
 

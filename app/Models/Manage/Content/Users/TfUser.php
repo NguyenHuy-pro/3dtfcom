@@ -74,7 +74,6 @@ class TfUser extends Model
         $modelUser = new TfUser();
         #create code
         $nameCode = "U3DTF" . $hFunction->getTimeCode();
-
         # insert
         $modelUser->nameCode = $nameCode;
         $modelUser->firstName = $firstName;
@@ -1312,7 +1311,7 @@ class TfUser extends Model
         return DB::select($strQuery);
     }
 
-    public function searchINfo()
+    /*public function searchINfo()
     {
         $strQuery = "SELECT * FROM (
                                         SELECT * FROM multichoice_questions WHERE challenge_category_id = 1 LIMIT 0, 2
@@ -1322,7 +1321,7 @@ class TfUser extends Model
                                         SELECT * FROM multichoice_questions WHERE challenge_category_id = 3 LIMIT 0, 2
                                         ) as tbl_result ORDER BY created_at DESC";
         return DB::select($strQuery);
-    }
+    }*/
     //turn off new info status
     public function offNewNotifyOfActivity($userId = null)
     {

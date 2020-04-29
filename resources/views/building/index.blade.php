@@ -62,11 +62,11 @@ $mobileStatus = ($mobile->isMobile()) ? true : false;
                         @yield('tf_building_content_ads')
 
                         {{-- google adsense --}}
-                        <div class="tf-margin-top-5 col-xs-12 col-sm-12 col-md-12 col-lg-12"
+                        {{--<div class="tf-margin-top-5 col-xs-12 col-sm-12 col-md-12 col-lg-12"
                              align="center">
-                            {{--@include('components.google.adsense.codeShowAds728x90')--}}
+                            --}}{{--@include('components.google.adsense.codeShowAds728x90')--}}{{--
                             @include('components.google.adsense.codeAuto')
-                        </div>
+                        </div>--}}
                     </div>
                 </div>
 
@@ -80,10 +80,10 @@ $mobileStatus = ($mobile->isMobile()) ? true : false;
                             </td>
                             <td class="hidden-sm" style="padding-top: 0;">
                                 {{-- google adsense --}}
-                                <div class=" tf-padding-none tf-margin-bot-5 col-xs-12 col-sm-12 col-md-12 col-lg-12"
+                                {{--<div class=" tf-padding-none tf-margin-bot-5 col-xs-12 col-sm-12 col-md-12 col-lg-12"
                                      style="width: 300px; text-align: center; background-color: grey;">
                                     @include('components.google.adsense.codeShowAds300x600')
-                                </div>
+                                </div>--}}
                                 {{--ads--}}
                                 <div class="tf-padding-none tf-margin-bot-5 col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                     @yield('tf_building_ads')

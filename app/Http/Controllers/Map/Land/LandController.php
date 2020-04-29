@@ -53,7 +53,7 @@ class LandController extends Controller
 
         //existing land
         if ($existStatus) {
-            //visitor access banner from share link
+            //visitor access land from share link
             if (!empty($shareCode)) {
                 $accessIP = $hFunction->getClientIP();
                 $dataLandShare = $modelLandShare->getInfoByShareCode($shareCode);

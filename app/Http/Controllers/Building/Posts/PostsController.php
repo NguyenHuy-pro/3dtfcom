@@ -61,8 +61,9 @@ class PostsController extends Controller
         $modelBuilding = new TfBuilding();
 
         $dataBuilding = $modelBuilding->findInfo($buildingId);
-        $dataBuilding->updateRelation($buildingId, $relationId);
-
+        if(count($dataBuilding) > 0){
+            $dataBuilding->updateRelation($buildingId, $relationId);
+        }
         $dataRelation = $modelRelation->getInfo();
         return view('building.posts.form-posts.add.posts-grant', compact('dataBuilding', 'dataRelation'));
     }
@@ -221,7 +222,7 @@ class PostsController extends Controller
         $dataBuildingPost_old = $modelBuildingPost->getInfo($postId);
         $oldImage = $dataBuildingPost_old->image();
         $buildingIntroId = ($buildingIntroId == 0) ? null : $buildingIntroId;
-        if (!empty($image)) {
+        if (!empty($image)) {// change image
             $imageName = $image->getClientOriginalName();
             $imageName = $dataBuildingPost_old->building->alias() . $hFunction->getTimeCode() . '.' . $hFunction->getTypeImg($imageName);
             $modelBuildingPost->uploadImage($image, $imageName);
@@ -254,10 +255,13 @@ class PostsController extends Controller
     }
 
     //delete
-    public function deletePost($postId = '')
+    public function deletePost($postId=null)
     {
         $modelBuildingPost = new TfBuildingPost();
-        $modelBuildingPost->actionDelete($postId);
+        if(!empty($postId)){
+            $modelBuildingPost->actionDelete($postId);
+        }
+
     }
 
     #========== ========== Detail ========= ===========
@@ -270,7 +274,6 @@ class PostsController extends Controller
         $modelBannerImage = new TfBannerImage();
         $dataBuildingPost = $modelBuildingPost->infoOfPostCode($postCode);
         if (count($dataBuildingPost) > 0) {
-
             $dataBuildingAccess = [
                 'accessObject' => 'detail',
                 'recentBuilding' => $modelBuilding->recentBuilding(5), //only take 5 records
@@ -338,9 +341,7 @@ class PostsController extends Controller
     {
         $modelUser = new TfUser();
         $modelPostComment = new TfBuildingPostComment();
-
         $content = Request::input('txtCommentContent');
-
         $dataUserLogin = $modelUser->loginUserInfo();
         $loginUserId = $dataUserLogin->userId();
         if (!empty($loginUserId)) {
@@ -363,11 +364,13 @@ class PostsController extends Controller
     }
 
     // edit
-    public function postEditComment($commentId = '')
+    public function postEditComment($commentId = null)
     {
         $modelPostComment = new TfBuildingPostComment();
-        $modelPostComment->updateContent($commentId, Request::input('txtCommentContent'));
-        return $modelPostComment->content($commentId);
+        if(!empty($commentId)){
+            $modelPostComment->updateContent($commentId, Request::input('txtCommentContent'));
+            return $modelPostComment->content($commentId);
+        }
     }
 
     // get more old comment

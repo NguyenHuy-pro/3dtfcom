@@ -36,7 +36,6 @@ class ServicesController extends Controller
 
         if (count($dataBuilding) > 0) {
             $buildingId = $dataBuilding->buildingId();
-            //echo "$buildingId <br/>";
             //insert view home
             $modelBuildingVisitHome->insert($buildingId, $modelUser->loginUserId());
             $take = 10;
@@ -53,7 +52,6 @@ class ServicesController extends Controller
                 'recentBannerImage' => $modelBannerImage->recentImage(5), // only take 5 records
                 'recentProject' => $modelProject->recentProjectPublished(5),
             ];
-            #dd($dataBuildingArticles);
             return view('building.services.services', compact('modelUser', 'modelBuilding', 'dataBuilding', 'dataBuildingAccess'));
         } else {
             return redirect()->route('tf.home');

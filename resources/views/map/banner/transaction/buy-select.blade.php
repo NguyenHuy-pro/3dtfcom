@@ -77,7 +77,7 @@ $bannerId = $dataBanner->bannerId();
                     @else
                         {{-- the user does not enough point to payment.--}}
                         <div class="form-group warning text-center tf-color-red">
-                            {!! trans('frontend_map.banner_sale_transaction_notify_point') !!}.
+                            <span>{!! trans('frontend_map.banner_sale_transaction_notify_point') !!}.</span>
                         </div>
                         <div class="form-group">
                             <div class="text-center col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -96,7 +96,7 @@ $bannerId = $dataBanner->bannerId();
             @else
                 {{--this banner is selected by others--}}
                 <div class="tf-padding-top-30 text-center col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    {!! trans('frontend_map.banner_transaction_notify_selected') !!}.
+                    <span>{!! trans('frontend_map.banner_transaction_notify_selected') !!}.</span>
                 </div>
                 <div class="tf-padding-20 text-center col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <button class="tf_main_contain_action_close btn btn-primary" type="button">
@@ -107,7 +107,7 @@ $bannerId = $dataBanner->bannerId();
         @else
             {{--this banner is selected by others--}}
             <div class="tf-padding-top-30 text-center col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                {!! trans('frontend_map.banner_transaction_notify_selected') !!}.
+                <span>{!! trans('frontend_map.banner_transaction_notify_selected') !!}.</span>
             </div>
             <div class="tf-padding-20 text-center col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <button class="tf_main_contain_action_close btn btn-primary" type="button">

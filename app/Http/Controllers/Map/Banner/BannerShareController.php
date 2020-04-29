@@ -55,6 +55,7 @@ class BannerShareController extends Controller
             #---------- notify ----------
             if (count($listFriend) > 0) {
                 $emailStatus = false;
+                # send email
                 if (!empty($email)) {
                     if ($mailObject->checkExist($email)) $emailStatus = true; else $email = null;
                 }

@@ -38,7 +38,7 @@ if (isset($dataMapAccess['landAccess']) AND count($dataMapAccess['landAccess']) 
 }
 ?>
 <div id="tf_land_{!! $landId !!}"
-     class="tf_land tf-land @if($landAccessId == $landId) tf_land_access @endif" data-land="{!! $landId !!}"
+     class="tf_land tf-land @if($landAccessId == $landId) tf_land_access tf-zindex-top @endif" data-land="{!! $landId !!}"
      style="width: {!! $landWidth !!}px;height: {!! $landHeight !!}px;top: {!! $top !!}px; left: {!! $left !!}px;z-index: {!! $zIndex !!}">
     {{-- land  was published--}}
     @if($publish == 1)

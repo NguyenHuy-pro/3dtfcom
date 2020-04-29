@@ -676,6 +676,7 @@ $(document).ready(function () {
         tf_map_building.comment.getIndex($(this).data('href'), buildingObject);
     });
 
+
     //enter content
     $('body').on('keyup', '#tfMapBuildingCommentForm .txt_content', function () {
         tf_main.tf_textareaAutoHeight(this, 1);
@@ -731,6 +732,14 @@ $(document).ready(function () {
     });
 });
 
+//=========== =========== =========== view about =========== =========== ===========
+$(document).ready(function () {
+    $('body').on('click', '.tf_map_building_information .tf_about_view', function () {
+        var href = $(this).data('href');
+        //alert('updating');
+        tf_main.tf_url_replace(href);
+    });
+});
 //=========== =========== =========== follow =========== =========== ===========
 $(document).ready(function () {
     $('body').on('click', '.tf_map_building_information .tf_follow', function () {

@@ -61,7 +61,7 @@ class BuildingBannerController extends Controller
     }
 
     #delete banner
-    public function deleteBanner($bannerId)
+    public function deleteBanner($bannerId=null)
     {
         $modelBuildingBanner = new TfBuildingBanner();
         return $modelBuildingBanner->actionDelete($bannerId);

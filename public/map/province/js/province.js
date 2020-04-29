@@ -40,7 +40,7 @@ var tf_map_province = {
         tf_master.footer.hide();
     },
     show: {
-        set_center:function(ev){
+        set_center: function (ev) {
             var provinceObject = tf_map_province.object();
             var top_mouse = ev.pageY;
             var left_mouse = ev.pageX;
@@ -90,14 +90,20 @@ $(document).ready(function () {
         tf_map_province.onClick();
     });
 
+    //process on mobile
+    if (tf_master.accessDevice.isHandset()) {
+        tf_map_province.object().on('touchend', function () {
+            tf_map_province.onClick();
+        });
 
+        //click on <a></a>  //process on mobile
+        /*tf_map_province.object().on('touchend', 'a', function () {
+            $(this).click();
+        });*/
+        /*tf_map_province.object().on('touchstart ', 'a', function () {
+            $(this).click();
+        });*/
+    }else{
 
-    tf_map_province.object().on('touchend', function () {
-        tf_map_province.onClick();
-    });
-
-    //click on <a></a>  //process on mobile
-    tf_map_province.object().on('touchend', 'a', function () {
-        $(this).click();
-    });
+    }
 });

@@ -109,7 +109,6 @@ $metaKeyword = (empty($metaKeyword)) ? $shortDescription : $metaKeyword;
         if ($userLoginId == $userBuildingId) {
             $postStatus = true;
         } else {
-
             #public
             if ($dataBuilding->relation->publicRelation()) {
                 $postStatus = true;

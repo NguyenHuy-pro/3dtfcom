@@ -31,7 +31,7 @@ $dataBannerLicenseInvite = $dataBannerLicense->bannerLicenseInviteInfo();
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 @if(count($dataBannerLicenseInvite) > 0)
                     <div class="form-group text-center">
-                        {!! trans('frontend_map.banner_invite_notify_sent') !!} :<br/>
+                        <span>{!! trans('frontend_map.banner_invite_notify_sent') !!} :</span><br/>
                         {!! $dataBannerLicenseInvite->email() !!}
                     </div>
 

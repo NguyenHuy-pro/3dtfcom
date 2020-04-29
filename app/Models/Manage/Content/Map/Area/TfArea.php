@@ -84,6 +84,11 @@ class TfArea extends Model
         }
     }
 
+    public function getInfoFromListAreaId($listAreaId)
+    {
+        return TfArea::whereIn('area_id', $listAreaId)->get();
+    }
+
     public function areaId()
     {
         return $this->area_id;
@@ -208,7 +213,7 @@ class TfArea extends Model
 
     public function forgetAreaLoad()
     {
-        if(Session::has('tf_map_area_history')){
+        if (Session::has('tf_map_area_history')) {
             Session::forget('tf_map_area_history');
         }
     }

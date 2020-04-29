@@ -695,7 +695,20 @@ $(window).load(function () {
 $(window).resize(function () {
     tf_master.setLayout();
 });
-
+//process on mobile
+$(document).ready(function () {
+    /*if (tf_master.accessDevice.isHandset()) {
+        //click on <a></a>
+        $('body').on('touchend', 'a', function () {
+            alert('yesssssss');
+            $(this).click();
+        });
+        $('body').on('touchstart ', 'a', function () {
+            alert('yesssssss');
+            $(this).click();
+        });
+    }*/
+});
 //----------- ----------- ON - OFF - FOOTER ----------- -----------
 $(document).ready(function () {
     $('.tf_main_wrap').on('click', '.tf_master_footer .tf_title', function () {

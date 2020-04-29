@@ -54,18 +54,14 @@ $buildingUserAvatar = $dataUserBuilding->pathSmallAvatar($buildingUserId, true);
                 <span class="glyphicon glyphicon-list-alt tf-font-size-20"></span>
             </td>
             <td class="col-xs-10 col-sm-10 col-md-11 col-lg-11 text-left">
-                <a class="tf-link" href="{!! route('tf.building.about.get', $buildingAlias) !!}"
-                   @if(!$hFunction->isHandset()) target="_blank" @endif title="{!! $shortDescription !!}">
-                    {!! $hFunction->cutString($shortDescription, 20,'...') !!}
-                </a>
-                <span class="badge pull-right" title="View">
-                    {!! $dataBuilding->totalVisitHome() !!}
-                </span>
-                <a class="tf-link-bold pull-right tf-margin-rig-10"
-                   href="{!! route('tf.building.about.get', $buildingAlias) !!}"
-                   @if(!$hFunction->isHandset()) target="_blank" @endif>
-                    View more
-                </a>
+                <div class="list-group" style="margin-bottom: 0; ">
+                    <a class="tf_about_view tf-link list-group-item" style="border: none;padding-left: 0;padding-right: 0;" data-href="{!! route('tf.building.about.get', $buildingAlias) !!}" >
+                        {!! $hFunction->cutString($shortDescription, 20,' ...') !!} &nbsp;&nbsp;View more
+                        <span class="badge pull-right" title="View">
+                            {!! $dataBuilding->totalVisitHome() !!}
+                        </span>
+                    </a>
+                </div>
             </td>
         </tr>
         <tr>

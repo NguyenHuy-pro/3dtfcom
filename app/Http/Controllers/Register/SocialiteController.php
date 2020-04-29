@@ -65,6 +65,7 @@ class SocialiteController extends Controller
 
     public function handleProviderConnectFacebook()
     {
+        $modelSendMail = new \Mail3dtf();
         $modelUser = new TfUser();
         $modelUserCard = new TfUserCard();
         $modelUserStatistic = new TfUserStatistic();
@@ -90,7 +91,7 @@ class SocialiteController extends Controller
         if ($modelUser->existAccount($txtAccount)) {
             return "<b>$txtAccount registered</b> ";
         } else {
-            $fromEmail = '3dtf.project@gmail.com';
+            $fromEmail = $modelSendMail->getServiceMail();
             $mailValidate = new \SMTP_Validate_Email($txtAccount, $fromEmail);
             $smtp_results = $mailValidate->validate();
             if ($smtp_results[$txtAccount]) {
@@ -187,6 +188,7 @@ class SocialiteController extends Controller
 
     public function handleProviderConnectGoogle()
     {
+        $modelSendMail = new \Mail3dtf();
         $modelUser = new TfUser();
         $modelUserCard = new TfUserCard();
         $modelUserStatistic = new TfUserStatistic();
@@ -212,7 +214,7 @@ class SocialiteController extends Controller
         if ($modelUser->existAccount($txtAccount)) {
             return "<b>$txtAccount registered</b> ";
         } else {
-            $fromEmail = '3dtf.project@gmail.com';
+            $fromEmail = $modelSendMail->getServiceMail();
             $mailValidate = new \SMTP_Validate_Email($txtAccount, $fromEmail);
             $smtp_results = $mailValidate->validate();
             if ($smtp_results[$txtAccount]) {
