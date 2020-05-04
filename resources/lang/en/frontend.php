@@ -70,11 +70,11 @@ return [
     'login_input_email_placeholder' => 'Enter email',
     'login_label_password' => 'Password',
     'login_input_password_placeholder' => 'Enter password',
-    'login_link_forget_password' => 'Forget password',
+    'login_link_forget_password' => 'Forgot Password',
     'login_button_login' => 'Login',
     'login_button_close' => 'Close',
     #forget password form
-    'forget_title' => 'Forget password',
+    'forget_title' => 'Forgot Password',
     'forget_label_account' => 'Your account',
     'forget_input_account_placeholder' => 'Your email',
     'forget_button_send' => 'Send',

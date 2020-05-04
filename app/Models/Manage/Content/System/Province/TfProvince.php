@@ -61,6 +61,12 @@ class TfProvince extends Model
         return TfProvince::where('province_id', $provinceId)->update(['status' => $status]);
     }
 
+    public function updateInfo($provinceId, $name, $typeId, $countryId)
+    {
+        return TfProvince::where('province_id', $provinceId)->update(['name' => $name, 'type_id' => $typeId, 'country_id' => $countryId]);
+    }
+
+
     //delete
     public function actionDelete($provinceId = null)
     {
@@ -159,12 +165,12 @@ class TfProvince extends Model
     }
 
     // create option of select
-    public function getOption($selected = '', $countryId= null)
+    public function getOption($selected = '', $countryId = null)
     {
         $hFunction = new \Hfunction();
-        if(empty($countryId)){
+        if (empty($countryId)) {
             $result = TfProvince::select('province_id as optionKey', 'name as optionValue')->get()->toArray();
-        }else{
+        } else {
             $result = TfProvince::where('country_id', $countryId)->select('province_id as optionKey', 'name as optionValue')->get()->toArray();
         }
         return $hFunction->option($result, $selected);

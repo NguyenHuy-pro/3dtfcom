@@ -46,6 +46,10 @@ $moBileDetect = new Mobile_Detect();
             </button>
         </div>
         <div class="form-group text-center">
+            <a class="tf-link" href="{!! route('tf.register.get') !!}">
+                {!! trans('frontend.login_notify_button_register') !!}
+            </a>
+            <span>&nbsp;|&nbsp;</span>
             <a class="tf_forget_pass tf-link" data-href="{!! route('tf.login.forget-pass.get') !!}">
                 {!! trans('frontend.login_link_forget_password') !!}
             </a>

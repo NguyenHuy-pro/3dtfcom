@@ -30,7 +30,7 @@ $title = 'Project rule';
         </div>
         <div class="tf-bg tf-color-white col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 tf-line-height-40">
-                Total : {!! $modelProject->totalRecords()  !!}
+                <span>Total : {!! $modelProject->totalRecords()  !!}</span>
             </div>
             <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 tf-line-height-40 text-right"></div>
         </div>
@@ -40,11 +40,12 @@ $title = 'Project rule';
              data-href-del="{!! route('tf.m.c.map.project.delete') !!}">
             <table class="table table-hover ">
                 <tr>
-                    <th>N_o</th>
-                    <th>Code</th>
+                    <th class="text-canter" style="width: 20px;">N_o</th>
+                    <th>Avatar</th>
                     <th>Name</th>
+                    <th>Code</th>
                     <th>Default</th>
-                    <th >Status</th>
+                    <th>Status</th>
                     <th></th>
                 </tr>
                 @if(count($dataProject) > 0)
@@ -58,12 +59,14 @@ $title = 'Project rule';
                         $projectId = $projectObject->projectId();
                         $status = $projectObject->status();
                         ?>
-                        <tr class="tf_object" data-object="{!!  $projectId  !!}">
+                        <tr class="tf_object @if($n_o%2) info @endif" data-object="{!!  $projectId  !!}">
                             <td class="tf-vertical-middle tf-font-bold">
                                 {!! $n_o +=1 !!}.
                             </td>
                             <td class="tf-vertical-middle" style="background-color: green;">
                                 <img src="{!! $modelProject->pathIconImage($projectId) !!}">&nbsp;&nbsp;
+                            </td>
+                            <td class="tf-vertical-middle">
                                 {!! $projectObject->name() !!}
                             </td>
                             <td class="tf-vertical-middle">
@@ -97,7 +100,7 @@ $title = 'Project rule';
                         </tr>
                     @endforeach
                     <tr>
-                        <td class="text-center" colspan="8">
+                        <td class="text-center" colspan="9">
                             <?php
                             $hFunction->page($dataProject);
                             ?>

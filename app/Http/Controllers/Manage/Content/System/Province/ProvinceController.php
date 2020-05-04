@@ -101,7 +101,7 @@ class ProvinceController extends Controller
     # edit info
     public function postEdit($provinceId = '')
     {
-        $modelProvince = TfProvince::find($provinceId);
+        $modelProvince = new TfProvince();
         $name = Request::input('txtName');
         $countryId = Request::input('cbCountry');
         $provinceTypeId = Request::input('cbProvinceType');
@@ -109,10 +109,7 @@ class ProvinceController extends Controller
             Session::put('notifyEditProvince', "Add fail, Name <b> '$name'</b> is existing.");
             return redirect()->back();
         } else {
-            $modelProvince->name = $name;
-            $modelProvince->provinceType_id = $provinceTypeId;
-            $modelProvince->country_id = $countryId;
-            $modelProvince->save();
+            $modelProvince->updateInfo($provinceId, $name,$provinceTypeId, $countryId);
         }
     }
 

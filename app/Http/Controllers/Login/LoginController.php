@@ -32,7 +32,7 @@ class LoginController extends Controller
             echo "Sorry!, wrong your account or password";
         } else {
             if ($modelUser->loginUserInfo('confirm') == 0) {
-                echo "Sorry!, this account unconfirmed";
+                echo "Sorry!, this account unconfirmed <br/>Please check mail to Conform";
                 $modelUser->logout();
             }
         }
@@ -79,7 +79,7 @@ class LoginController extends Controller
                             New your password to login on 3dtf.com : $newPassword.
                             Click the link below to access 3dtf.com
                             $href";
-                $mailObject->sendFromGmail('3DTF.COM', $account, $message);
+                $mailObject->sendEmailInfo3D('3DTF.COM', $account, $message);
                 $result['status'] = 'success';
                 $result['content'] = "<h3>New password sent to your email.</h3>";
             } else {

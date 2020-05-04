@@ -256,7 +256,7 @@ $(document).ready(function () {
             $('#tf_building_wrapper').animate({
                 scrollTop: 0
             })
-        })
+        });
     }
 });
 

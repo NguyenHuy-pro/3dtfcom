@@ -30,7 +30,7 @@ $title = 'Province';
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 " style="background-color: #BFCAE6;">
             <div class="col-xs-4 col-sm-4 col-md-4 tf-line-height-40">
-                Total : {!! $modelProvince->totalRecords() !!}
+                <span>Total :</span> {!! $modelProvince->totalRecords() !!}
             </div>
             <div class="col-xs-4 col-sm-4 col-md-4 text-right tf-line-height-40">
                 <select id="cbFilterCountry" class="tf_filter_country"
@@ -57,7 +57,7 @@ $title = 'Province';
              data-href-del="{!! route('tf.m.c.system.province.delete') !!}">
             <table class="table table-hover">
                 <tr>
-                    <th class="text-center">No</th>
+                    <th class="text-center" style="width: 25px;">No</th>
                     <th>Name</th>
                     <th>Type</th>
                     <th>Country</th>
@@ -77,7 +77,7 @@ $title = 'Province';
                         $provinceId = $itemProvince->provinceId();
                         $status = $itemProvince->status();
                         ?>
-                        <tr class="tf_object" data-object="{!! $provinceId !!}">
+                        <tr class="tf_object @if($n_o%2) info @endif" data-object="{!! $provinceId !!}">
                             <td class="text-center">
                                 {!! $n_o += 1 !!}.
                             </td>
